@@ -15,7 +15,7 @@ const Register = () => {
         .then((result) => {
             console.log(result.user);
             const createdAt = result.user?.metadata?.creationTime
-            fetch(`http://localhost:5000/users`, {
+            fetch(`https://coffee-store-server-jet-pi.vercel.app/users`, {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"

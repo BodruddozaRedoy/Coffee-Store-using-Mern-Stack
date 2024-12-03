@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 const DisplayUsers = () => {
     const [users, setUsers] = useState([])
     useEffect(() => {
-    fetch('http://localhost:5000/users')
+    fetch('https://coffee-store-server-jet-pi.vercel.app/users')
     .then(res => res.json())
     .then(data => setUsers(data))
     }, [])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/users/${id}`, {
+        fetch(`https://coffee-store-server-jet-pi.vercel.app/users/${id}`, {
             method: "DELETE"
         })
         .then(res => res.json())
